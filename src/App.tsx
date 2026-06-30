@@ -27,7 +27,13 @@ function App() {
         <Route index element={<Login />} /> 
       </Route> */}
       <Route path="/" element={<Navigate to="/auth/login" />} />
+
+      // test link stay_primary_portrait
       <Route path='/products' element={<AllProducts />} />
+      <Route path="/shop/product/:productId" element={<ProductDetails />} />
+       <Route path="/shop/home" element={<Home />} />
+      // test link end
+
       <Route path='/auth' element={<AuthLayout />} >
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />

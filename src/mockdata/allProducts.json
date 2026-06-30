@@ -1,372 +1,422 @@
 [
   {
     "id": "p1",
-    "name": "Classic White Cotton Shirt",
-    "short_description": "Slim fit premium cotton shirt",
+    "name": "Roadster Men Checked Casual Shirt",
+    "short_description": "Cotton checked shirt for everyday wear",
     "base_price": 0,
     "currency": "INR",
-    "brand": {
-      "id": "b1",
-      "name": "Roadster"
-    },
-    "created_by": "",
+    "brand": { "id": "b1", "name": "Roadster" },
     "variants": [
       {
-        "id": "v1",
-        "sku": "SHIRT001",
-        "price": 1499,
-        "discount_percent": 10,
-        "original_price": 1699,
-        "final_price": 1499,
-        "stock": 120,
-        "Status": "",
-        "attribute_groups": null,
+        "id": "v1_red",
+        "sku": "RS001-RED",
+        "price": 1299,
+        "discount_percent": 20,
+        "original_price": 1625,
+        "final_price": 1299,
+        "stock": 45,
+        "Status": "Available",
+        "attribute_groups": { "size": "M", "color": "Red" },
         "images": [
-          {
-            "id": "i1",
-            "url": "https://picsum.photos/400/500?random=1",
-            "is_primary": true,
-            "public_id": ""
-          }
+          { "id": "i1", "url": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c", "is_primary": true },
+          { "id": "i2", "url": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf" }
+        ]
+      },
+      {
+        "id": "v1_blue",
+        "sku": "RS001-BLU",
+        "price": 1299,
+        "discount_percent": 20,
+        "original_price": 1625,
+        "final_price": 1299,
+        "stock": 30,
+        "Status": "Available",
+        "attribute_groups": { "size": "M", "color": "Blue" },
+        "images": [
+          { "id": "i3", "url": "https://images.unsplash.com/photo-1603252109303-2751441dd157", "is_primary": true },
+          { "id": "i4", "url": "https://images.unsplash.com/photo-1598032895397-b9472444bf93" }
         ]
       }
     ],
     "created_at": "2026-06-01T10:00:00Z",
-    "is_wishlisted": false,
-    "attributes": null,
-    "allAttributes": null
+    "is_wishlisted": false
   },
   {
     "id": "p2",
-    "name": "Black Formal Shirt",
-    "short_description": "Wrinkle-free office shirt",
+    "name": "H&M Women Floral Summer Dress",
+    "short_description": "Lightweight floral A-line dress",
     "base_price": 0,
     "currency": "INR",
-    "brand": {
-      "id": "b2",
-      "name": "Louis Philippe"
-    },
-    "created_by": "",
+    "brand": { "id": "b2", "name": "H&M" },
     "variants": [
       {
-        "id": "v2",
-        "sku": "SHIRT002",
-        "price": 1899,
-        "discount_percent": 15,
-        "original_price": 2250,
-        "final_price": 1899,
-        "stock": 95,
-        "Status": "",
-        "attribute_groups": null,
+        "id": "v2_yellow",
+        "sku": "HM002-YEL",
+        "price": 1999,
+        "discount_percent": 10,
+        "original_price": 2220,
+        "final_price": 1999,
+        "stock": 15,
+        "Status": "Low Stock",
+        "attribute_groups": { "size": "M", "color": "Yellow" },
         "images": [
-          {
-            "id": "i2",
-            "url": "https://picsum.photos/400/500?random=2",
-            "is_primary": true,
-            "public_id": ""
-          }
+          { "id": "i5", "url": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1", "is_primary": true },
+          { "id": "i6", "url": "https://images.unsplash.com/photo-1515347619152-09bb333b2bf4" }
+        ]
+      },
+      {
+        "id": "v2_blue",
+        "sku": "HM002-BLU",
+        "price": 1999,
+        "discount_percent": 10,
+        "original_price": 2220,
+        "final_price": 1999,
+        "stock": 40,
+        "Status": "Available",
+        "attribute_groups": { "size": "M", "color": "Blue" },
+        "images": [
+          { "id": "i7", "url": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446", "is_primary": true },
+          { "id": "i8", "url": "https://images.unsplash.com/photo-1520975916090-3105956dac38" }
         ]
       }
     ],
     "created_at": "2026-06-02T10:00:00Z",
-    "is_wishlisted": true,
-    "attributes": null,
-    "allAttributes": null
+    "is_wishlisted": true
   },
   {
     "id": "p3",
-    "name": "Blue Denim Shirt",
-    "short_description": "Casual full sleeve denim shirt",
+    "name": "Levi's Men 511 Slim Fit Jeans",
+    "short_description": "Classic stretch denim jeans",
     "base_price": 0,
     "currency": "INR",
-    "brand": {
-      "id": "b3",
-      "name": "Levi's"
-    },
-    "created_by": "",
+    "brand": { "id": "b3", "name": "Levi's" },
     "variants": [
       {
-        "id": "v3",
-        "sku": "SHIRT003",
-        "price": 2299,
-        "discount_percent": 20,
-        "original_price": 2899,
-        "final_price": 2299,
+        "id": "v3_light_blue",
+        "sku": "LV003-LBLU",
+        "price": 2499,
+        "discount_percent": 15,
+        "original_price": 2940,
+        "final_price": 2499,
         "stock": 60,
-        "Status": "",
-        "attribute_groups": null,
+        "Status": "Available",
+        "attribute_groups": { "size": "32", "color": "Light Blue" },
         "images": [
-          {
-            "id": "i3",
-            "url": "https://picsum.photos/400/500?random=3",
-            "is_primary": true,
-            "public_id": ""
-          }
+          { "id": "i9", "url": "https://images.unsplash.com/photo-1542272604-787c3835535d", "is_primary": true },
+          { "id": "i10", "url": "https://images.unsplash.com/photo-1582552938357-32b906df40cb" }
+        ]
+      },
+      {
+        "id": "v3_black",
+        "sku": "LV003-BLK",
+        "price": 2499,
+        "discount_percent": 15,
+        "original_price": 2940,
+        "final_price": 2499,
+        "stock": 55,
+        "Status": "Available",
+        "attribute_groups": { "size": "32", "color": "Black" },
+        "images": [
+          { "id": "i11", "url": "https://images.unsplash.com/photo-1602293589930-45aad59ba3ab", "is_primary": true },
+          { "id": "i12", "url": "https://images.unsplash.com/photo-1584865288642-42078afe6942" }
         ]
       }
     ],
     "created_at": "2026-06-03T10:00:00Z",
-    "is_wishlisted": false,
-    "attributes": null,
-    "allAttributes": null
+    "is_wishlisted": false
   },
   {
     "id": "p4",
-    "name": "Oversized Graphic T-Shirt",
-    "short_description": "100% cotton oversized tee",
+    "name": "Zara Women Basic Top",
+    "short_description": "Ribbed knit sleeveless top",
     "base_price": 0,
     "currency": "INR",
-    "brand": {
-      "id": "b4",
-      "name": "H&M"
-    },
-    "created_by": "",
+    "brand": { "id": "b4", "name": "Zara" },
     "variants": [
       {
-        "id": "v4",
-        "sku": "TEE001",
-        "price": 999,
+        "id": "v4_white",
+        "sku": "ZR004-WHT",
+        "price": 899,
         "discount_percent": 0,
-        "original_price": 999,
-        "final_price": 999,
-        "stock": 180,
-        "Status": "",
-        "attribute_groups": null,
+        "original_price": 899,
+        "final_price": 899,
+        "stock": 25,
+        "Status": "Available",
+        "attribute_groups": { "size": "S", "color": "White" },
         "images": [
-          {
-            "id": "i4",
-            "url": "https://picsum.photos/400/500?random=4",
-            "is_primary": true,
-            "public_id": ""
-          }
+          { "id": "i13", "url": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c", "is_primary": true },
+          { "id": "i14", "url": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b" }
+        ]
+      },
+      {
+        "id": "v4_black",
+        "sku": "ZR004-BLK",
+        "price": 899,
+        "discount_percent": 0,
+        "original_price": 899,
+        "final_price": 899,
+        "stock": 45,
+        "Status": "Available",
+        "attribute_groups": { "size": "S", "color": "Black" },
+        "images": [
+          { "id": "i15", "url": "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb", "is_primary": true },
+          { "id": "i16", "url": "https://images.unsplash.com/photo-1536766820879-059fec98ec0a" }
         ]
       }
     ],
     "created_at": "2026-06-04T10:00:00Z",
-    "is_wishlisted": false,
-    "attributes": null,
-    "allAttributes": null
+    "is_wishlisted": false
   },
   {
     "id": "p5",
-    "name": "Navy Polo T-Shirt",
-    "short_description": "Premium polo t-shirt",
+    "name": "Puma Men Graphic T-Shirt",
+    "short_description": "Cotton round neck graphic tee",
     "base_price": 0,
     "currency": "INR",
-    "brand": {
-      "id": "b5",
-      "name": "U.S. Polo Assn."
-    },
-    "created_by": "",
+    "brand": { "id": "b5", "name": "Puma" },
     "variants": [
       {
-        "id": "v5",
-        "sku": "TEE002",
-        "price": 1399,
-        "discount_percent": 10,
-        "original_price": 1550,
-        "final_price": 1399,
-        "stock": 140,
-        "Status": "",
-        "attribute_groups": null,
+        "id": "v5_black",
+        "sku": "PM005-BLK",
+        "price": 699,
+        "discount_percent": 30,
+        "original_price": 999,
+        "final_price": 699,
+        "stock": 100,
+        "Status": "Available",
+        "attribute_groups": { "size": "M", "color": "Black" },
         "images": [
-          {
-            "id": "i5",
-            "url": "https://picsum.photos/400/500?random=5",
-            "is_primary": true,
-            "public_id": ""
-          }
+          { "id": "i17", "url": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab", "is_primary": true },
+          { "id": "i18", "url": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a" }
+        ]
+      },
+      {
+        "id": "v5_white",
+        "sku": "PM005-WHT",
+        "price": 699,
+        "discount_percent": 30,
+        "original_price": 999,
+        "final_price": 699,
+        "stock": 80,
+        "Status": "Available",
+        "attribute_groups": { "size": "M", "color": "White" },
+        "images": [
+          { "id": "i19", "url": "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9", "is_primary": true },
+          { "id": "i20", "url": "https://images.unsplash.com/photo-1574180566232-aaad1b5b8450" }
         ]
       }
     ],
     "created_at": "2026-06-05T10:00:00Z",
-    "is_wishlisted": true,
-    "attributes": null,
-    "allAttributes": null
+    "is_wishlisted": true
   },
   {
     "id": "p6",
-    "name": "Women's Floral Maxi Dress",
-    "short_description": "Elegant floral summer dress",
+    "name": "Biba Women Ethnic Kurti",
+    "short_description": "Cotton straight ethnic kurti",
     "base_price": 0,
     "currency": "INR",
-    "brand": {
-      "id": "b6",
-      "name": "Zara"
-    },
-    "created_by": "",
+    "brand": { "id": "b6", "name": "Biba" },
     "variants": [
       {
-        "id": "v6",
-        "sku": "DRESS001",
-        "price": 2599,
-        "discount_percent": 15,
-        "original_price": 3099,
-        "final_price": 2599,
-        "stock": 50,
-        "Status": "",
-        "attribute_groups": null,
+        "id": "v6_pink",
+        "sku": "BB006-PNK",
+        "price": 1499,
+        "discount_percent": 25,
+        "original_price": 1999,
+        "final_price": 1499,
+        "stock": 35,
+        "Status": "Available",
+        "attribute_groups": { "size": "M", "color": "Pink" },
         "images": [
-          {
-            "id": "i6",
-            "url": "https://picsum.photos/400/500?random=6",
-            "is_primary": true,
-            "public_id": ""
-          }
+          { "id": "i21", "url": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990", "is_primary": true },
+          { "id": "i22", "url": "https://images.unsplash.com/photo-1583391733958-6c782781b09b" }
+        ]
+      },
+      {
+        "id": "v6_green",
+        "sku": "BB006-GRN",
+        "price": 1499,
+        "discount_percent": 25,
+        "original_price": 1999,
+        "final_price": 1499,
+        "stock": 20,
+        "Status": "Available",
+        "attribute_groups": { "size": "M", "color": "Green" },
+        "images": [
+          { "id": "i23", "url": "https://images.unsplash.com/photo-1603485078563-305d21a2eb36", "is_primary": true },
+          { "id": "i24", "url": "https://images.unsplash.com/photo-1602810318029-4d6232b704e6" }
         ]
       }
     ],
     "created_at": "2026-06-06T10:00:00Z",
-    "is_wishlisted": false,
-    "attributes": null,
-    "allAttributes": null
+    "is_wishlisted": false
   },
   {
     "id": "p7",
-    "name": "Red Party Dress",
-    "short_description": "Stylish evening party dress",
+    "name": "Nike Men Running Shorts",
+    "short_description": "Dri-FIT athletic training shorts",
     "base_price": 0,
     "currency": "INR",
-    "brand": {
-      "id": "b7",
-      "name": "Forever 21"
-    },
-    "created_by": "",
+    "brand": { "id": "b7", "name": "Nike" },
     "variants": [
       {
-        "id": "v7",
-        "sku": "DRESS002",
-        "price": 3199,
-        "discount_percent": 20,
-        "original_price": 3999,
-        "final_price": 3199,
-        "stock": 40,
-        "Status": "",
-        "attribute_groups": null,
+        "id": "v7_grey",
+        "sku": "NK007-GRY",
+        "price": 1299,
+        "discount_percent": 10,
+        "original_price": 1445,
+        "final_price": 1299,
+        "stock": 90,
+        "Status": "Available",
+        "attribute_groups": { "size": "L", "color": "Grey" },
         "images": [
-          {
-            "id": "i7",
-            "url": "https://picsum.photos/400/500?random=7",
-            "is_primary": true,
-            "public_id": ""
-          }
+          { "id": "i25", "url": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b", "is_primary": true },
+          { "id": "i26", "url": "https://images.unsplash.com/photo-1565084888279-aca607ecce0c" }
+        ]
+      },
+      {
+        "id": "v7_black",
+        "sku": "NK007-BLK",
+        "price": 1299,
+        "discount_percent": 10,
+        "original_price": 1445,
+        "final_price": 1299,
+        "stock": 110,
+        "Status": "Available",
+        "attribute_groups": { "size": "L", "color": "Black" },
+        "images": [
+          { "id": "i27", "url": "https://images.unsplash.com/photo-1538805060514-97d9cc17730c", "is_primary": true },
+          { "id": "i28", "url": "https://images.unsplash.com/photo-1505554746356-02e5a6a68fc7" }
         ]
       }
     ],
     "created_at": "2026-06-07T10:00:00Z",
-    "is_wishlisted": true,
-    "attributes": null,
-    "allAttributes": null
+    "is_wishlisted": false
   },
   {
     "id": "p8",
-    "name": "Banarasi Silk Saree",
-    "short_description": "Traditional wedding silk saree",
+    "name": "Mango Women High-Waist Jeans",
+    "short_description": "Flared fit retro style jeans",
     "base_price": 0,
     "currency": "INR",
-    "brand": {
-      "id": "b8",
-      "name": "Fabindia"
-    },
-    "created_by": "",
+    "brand": { "id": "b8", "name": "Mango" },
     "variants": [
       {
-        "id": "v8",
-        "sku": "SAR001",
-        "price": 5499,
-        "discount_percent": 12,
-        "original_price": 6250,
-        "final_price": 5499,
-        "stock": 25,
-        "Status": "",
-        "attribute_groups": null,
+        "id": "v8_blue",
+        "sku": "MG008-BLU",
+        "price": 2899,
+        "discount_percent": 20,
+        "original_price": 3625,
+        "final_price": 2899,
+        "stock": 50,
+        "Status": "Available",
+        "attribute_groups": { "size": "28", "color": "Blue" },
         "images": [
-          {
-            "id": "i8",
-            "url": "https://picsum.photos/400/500?random=8",
-            "is_primary": true,
-            "public_id": ""
-          }
+          { "id": "i29", "url": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246", "is_primary": true },
+          { "id": "i30", "url": "https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec" }
+        ]
+      },
+      {
+        "id": "v8_white",
+        "sku": "MG008-WHT",
+        "price": 2899,
+        "discount_percent": 20,
+        "original_price": 3625,
+        "final_price": 2899,
+        "stock": 45,
+        "Status": "Available",
+        "attribute_groups": { "size": "28", "color": "White" },
+        "images": [
+          { "id": "i31", "url": "https://images.unsplash.com/photo-1604136172384-a14eb2ed9ee8", "is_primary": true },
+          { "id": "i32", "url": "https://images.unsplash.com/photo-1582552938357-32b906df40cb" }
         ]
       }
     ],
     "created_at": "2026-06-08T10:00:00Z",
-    "is_wishlisted": false,
-    "attributes": null,
-    "allAttributes": null
+    "is_wishlisted": true
   },
   {
     "id": "p9",
-    "name": "Blue Slim Fit Jeans",
-    "short_description": "Comfort stretch denim jeans",
+    "name": "Allen Solly Men Formal Trousers",
+    "short_description": "Slim fit flat front trousers",
     "base_price": 0,
     "currency": "INR",
-    "brand": {
-      "id": "b9",
-      "name": "Wrangler"
-    },
-    "created_by": "",
+    "brand": { "id": "b9", "name": "Allen Solly" },
     "variants": [
       {
-        "id": "v9",
-        "sku": "JEANS001",
-        "price": 1999,
-        "discount_percent": 10,
-        "original_price": 2200,
-        "final_price": 1999,
-        "stock": 100,
-        "Status": "",
-        "attribute_groups": null,
+        "id": "v9_beige",
+        "sku": "AS009-BGE",
+        "price": 1799,
+        "discount_percent": 15,
+        "original_price": 2115,
+        "final_price": 1799,
+        "stock": 75,
+        "Status": "Available",
+        "attribute_groups": { "size": "32", "color": "Beige" },
         "images": [
-          {
-            "id": "i9",
-            "url": "https://picsum.photos/400/500?random=9",
-            "is_primary": true,
-            "public_id": ""
-          }
+          { "id": "i33", "url": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80", "is_primary": true },
+          { "id": "i34", "url": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8" }
+        ]
+      },
+      {
+        "id": "v9_charcoal",
+        "sku": "AS009-CHR",
+        "price": 1799,
+        "discount_percent": 15,
+        "original_price": 2115,
+        "final_price": 1799,
+        "stock": 80,
+        "Status": "Available",
+        "attribute_groups": { "size": "32", "color": "Charcoal" },
+        "images": [
+          { "id": "i35", "url": "https://images.unsplash.com/photo-1594938384824-02290fcbf1e3", "is_primary": true },
+          { "id": "i36", "url": "https://images.unsplash.com/photo-1594938291221-94f18cbb5660" }
         ]
       }
     ],
     "created_at": "2026-06-09T10:00:00Z",
-    "is_wishlisted": false,
-    "attributes": null,
-    "allAttributes": null
+    "is_wishlisted": false
   },
   {
     "id": "p10",
-    "name": "Winter Hoodie",
-    "short_description": "Warm fleece hooded sweatshirt",
+    "name": "Fabindia Women Cotton Saree",
+    "short_description": "Traditional block printed cotton saree",
     "base_price": 0,
     "currency": "INR",
-    "brand": {
-      "id": "b10",
-      "name": "Puma"
-    },
-    "created_by": "",
+    "brand": { "id": "b10", "name": "Fabindia" },
     "variants": [
       {
-        "id": "v10",
-        "sku": "HOOD001",
+        "id": "v10_green",
+        "sku": "FB010-GRN",
         "price": 2499,
-        "discount_percent": 18,
-        "original_price": 2999,
+        "discount_percent": 10,
+        "original_price": 2775,
         "final_price": 2499,
-        "stock": 75,
-        "Status": "",
-        "attribute_groups": null,
+        "stock": 30,
+        "Status": "Available",
+        "attribute_groups": { "size": "Free Size", "color": "Green" },
         "images": [
-          {
-            "id": "i10",
-            "url": "https://picsum.photos/400/500?random=10",
-            "is_primary": true,
-            "public_id": ""
-          }
+          { "id": "i37", "url": "https://images.unsplash.com/photo-1602810317830-7a0d1b6b3f0e", "is_primary": true },
+          { "id": "i38", "url": "https://images.unsplash.com/photo-1583391733958-6c782781b09b" }
+        ]
+      },
+      {
+        "id": "v10_blue",
+        "sku": "FB010-BLU",
+        "price": 2499,
+        "discount_percent": 10,
+        "original_price": 2775,
+        "final_price": 2499,
+        "stock": 25,
+        "Status": "Available",
+        "attribute_groups": { "size": "Free Size", "color": "Blue" },
+        "images": [
+          { "id": "i39", "url": "https://images.unsplash.com/photo-1610030469983-98e550d6193c", "is_primary": true },
+          { "id": "i40", "url": "https://images.unsplash.com/photo-1596484552834-6a58f860da18" }
         ]
       }
     ],
     "created_at": "2026-06-10T10:00:00Z",
-    "is_wishlisted": false,
-    "attributes": null,
-    "allAttributes": null
+    "is_wishlisted": false
   }
 ]
