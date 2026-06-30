@@ -1,0 +1,372 @@
+[
+  {
+    "id": "p1",
+    "name": "Classic White Cotton Shirt",
+    "short_description": "Slim fit premium cotton shirt",
+    "base_price": 0,
+    "currency": "INR",
+    "brand": {
+      "id": "b1",
+      "name": "Roadster"
+    },
+    "created_by": "",
+    "variants": [
+      {
+        "id": "v1",
+        "sku": "SHIRT001",
+        "price": 1499,
+        "discount_percent": 10,
+        "original_price": 1699,
+        "final_price": 1499,
+        "stock": 120,
+        "Status": "",
+        "attribute_groups": null,
+        "images": [
+          {
+            "id": "i1",
+            "url": "https://picsum.photos/400/500?random=1",
+            "is_primary": true,
+            "public_id": ""
+          }
+        ]
+      }
+    ],
+    "created_at": "2026-06-01T10:00:00Z",
+    "is_wishlisted": false,
+    "attributes": null,
+    "allAttributes": null
+  },
+  {
+    "id": "p2",
+    "name": "Black Formal Shirt",
+    "short_description": "Wrinkle-free office shirt",
+    "base_price": 0,
+    "currency": "INR",
+    "brand": {
+      "id": "b2",
+      "name": "Louis Philippe"
+    },
+    "created_by": "",
+    "variants": [
+      {
+        "id": "v2",
+        "sku": "SHIRT002",
+        "price": 1899,
+        "discount_percent": 15,
+        "original_price": 2250,
+        "final_price": 1899,
+        "stock": 95,
+        "Status": "",
+        "attribute_groups": null,
+        "images": [
+          {
+            "id": "i2",
+            "url": "https://picsum.photos/400/500?random=2",
+            "is_primary": true,
+            "public_id": ""
+          }
+        ]
+      }
+    ],
+    "created_at": "2026-06-02T10:00:00Z",
+    "is_wishlisted": true,
+    "attributes": null,
+    "allAttributes": null
+  },
+  {
+    "id": "p3",
+    "name": "Blue Denim Shirt",
+    "short_description": "Casual full sleeve denim shirt",
+    "base_price": 0,
+    "currency": "INR",
+    "brand": {
+      "id": "b3",
+      "name": "Levi's"
+    },
+    "created_by": "",
+    "variants": [
+      {
+        "id": "v3",
+        "sku": "SHIRT003",
+        "price": 2299,
+        "discount_percent": 20,
+        "original_price": 2899,
+        "final_price": 2299,
+        "stock": 60,
+        "Status": "",
+        "attribute_groups": null,
+        "images": [
+          {
+            "id": "i3",
+            "url": "https://picsum.photos/400/500?random=3",
+            "is_primary": true,
+            "public_id": ""
+          }
+        ]
+      }
+    ],
+    "created_at": "2026-06-03T10:00:00Z",
+    "is_wishlisted": false,
+    "attributes": null,
+    "allAttributes": null
+  },
+  {
+    "id": "p4",
+    "name": "Oversized Graphic T-Shirt",
+    "short_description": "100% cotton oversized tee",
+    "base_price": 0,
+    "currency": "INR",
+    "brand": {
+      "id": "b4",
+      "name": "H&M"
+    },
+    "created_by": "",
+    "variants": [
+      {
+        "id": "v4",
+        "sku": "TEE001",
+        "price": 999,
+        "discount_percent": 0,
+        "original_price": 999,
+        "final_price": 999,
+        "stock": 180,
+        "Status": "",
+        "attribute_groups": null,
+        "images": [
+          {
+            "id": "i4",
+            "url": "https://picsum.photos/400/500?random=4",
+            "is_primary": true,
+            "public_id": ""
+          }
+        ]
+      }
+    ],
+    "created_at": "2026-06-04T10:00:00Z",
+    "is_wishlisted": false,
+    "attributes": null,
+    "allAttributes": null
+  },
+  {
+    "id": "p5",
+    "name": "Navy Polo T-Shirt",
+    "short_description": "Premium polo t-shirt",
+    "base_price": 0,
+    "currency": "INR",
+    "brand": {
+      "id": "b5",
+      "name": "U.S. Polo Assn."
+    },
+    "created_by": "",
+    "variants": [
+      {
+        "id": "v5",
+        "sku": "TEE002",
+        "price": 1399,
+        "discount_percent": 10,
+        "original_price": 1550,
+        "final_price": 1399,
+        "stock": 140,
+        "Status": "",
+        "attribute_groups": null,
+        "images": [
+          {
+            "id": "i5",
+            "url": "https://picsum.photos/400/500?random=5",
+            "is_primary": true,
+            "public_id": ""
+          }
+        ]
+      }
+    ],
+    "created_at": "2026-06-05T10:00:00Z",
+    "is_wishlisted": true,
+    "attributes": null,
+    "allAttributes": null
+  },
+  {
+    "id": "p6",
+    "name": "Women's Floral Maxi Dress",
+    "short_description": "Elegant floral summer dress",
+    "base_price": 0,
+    "currency": "INR",
+    "brand": {
+      "id": "b6",
+      "name": "Zara"
+    },
+    "created_by": "",
+    "variants": [
+      {
+        "id": "v6",
+        "sku": "DRESS001",
+        "price": 2599,
+        "discount_percent": 15,
+        "original_price": 3099,
+        "final_price": 2599,
+        "stock": 50,
+        "Status": "",
+        "attribute_groups": null,
+        "images": [
+          {
+            "id": "i6",
+            "url": "https://picsum.photos/400/500?random=6",
+            "is_primary": true,
+            "public_id": ""
+          }
+        ]
+      }
+    ],
+    "created_at": "2026-06-06T10:00:00Z",
+    "is_wishlisted": false,
+    "attributes": null,
+    "allAttributes": null
+  },
+  {
+    "id": "p7",
+    "name": "Red Party Dress",
+    "short_description": "Stylish evening party dress",
+    "base_price": 0,
+    "currency": "INR",
+    "brand": {
+      "id": "b7",
+      "name": "Forever 21"
+    },
+    "created_by": "",
+    "variants": [
+      {
+        "id": "v7",
+        "sku": "DRESS002",
+        "price": 3199,
+        "discount_percent": 20,
+        "original_price": 3999,
+        "final_price": 3199,
+        "stock": 40,
+        "Status": "",
+        "attribute_groups": null,
+        "images": [
+          {
+            "id": "i7",
+            "url": "https://picsum.photos/400/500?random=7",
+            "is_primary": true,
+            "public_id": ""
+          }
+        ]
+      }
+    ],
+    "created_at": "2026-06-07T10:00:00Z",
+    "is_wishlisted": true,
+    "attributes": null,
+    "allAttributes": null
+  },
+  {
+    "id": "p8",
+    "name": "Banarasi Silk Saree",
+    "short_description": "Traditional wedding silk saree",
+    "base_price": 0,
+    "currency": "INR",
+    "brand": {
+      "id": "b8",
+      "name": "Fabindia"
+    },
+    "created_by": "",
+    "variants": [
+      {
+        "id": "v8",
+        "sku": "SAR001",
+        "price": 5499,
+        "discount_percent": 12,
+        "original_price": 6250,
+        "final_price": 5499,
+        "stock": 25,
+        "Status": "",
+        "attribute_groups": null,
+        "images": [
+          {
+            "id": "i8",
+            "url": "https://picsum.photos/400/500?random=8",
+            "is_primary": true,
+            "public_id": ""
+          }
+        ]
+      }
+    ],
+    "created_at": "2026-06-08T10:00:00Z",
+    "is_wishlisted": false,
+    "attributes": null,
+    "allAttributes": null
+  },
+  {
+    "id": "p9",
+    "name": "Blue Slim Fit Jeans",
+    "short_description": "Comfort stretch denim jeans",
+    "base_price": 0,
+    "currency": "INR",
+    "brand": {
+      "id": "b9",
+      "name": "Wrangler"
+    },
+    "created_by": "",
+    "variants": [
+      {
+        "id": "v9",
+        "sku": "JEANS001",
+        "price": 1999,
+        "discount_percent": 10,
+        "original_price": 2200,
+        "final_price": 1999,
+        "stock": 100,
+        "Status": "",
+        "attribute_groups": null,
+        "images": [
+          {
+            "id": "i9",
+            "url": "https://picsum.photos/400/500?random=9",
+            "is_primary": true,
+            "public_id": ""
+          }
+        ]
+      }
+    ],
+    "created_at": "2026-06-09T10:00:00Z",
+    "is_wishlisted": false,
+    "attributes": null,
+    "allAttributes": null
+  },
+  {
+    "id": "p10",
+    "name": "Winter Hoodie",
+    "short_description": "Warm fleece hooded sweatshirt",
+    "base_price": 0,
+    "currency": "INR",
+    "brand": {
+      "id": "b10",
+      "name": "Puma"
+    },
+    "created_by": "",
+    "variants": [
+      {
+        "id": "v10",
+        "sku": "HOOD001",
+        "price": 2499,
+        "discount_percent": 18,
+        "original_price": 2999,
+        "final_price": 2499,
+        "stock": 75,
+        "Status": "",
+        "attribute_groups": null,
+        "images": [
+          {
+            "id": "i10",
+            "url": "https://picsum.photos/400/500?random=10",
+            "is_primary": true,
+            "public_id": ""
+          }
+        ]
+      }
+    ],
+    "created_at": "2026-06-10T10:00:00Z",
+    "is_wishlisted": false,
+    "attributes": null,
+    "allAttributes": null
+  }
+]
