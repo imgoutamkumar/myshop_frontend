@@ -1,8 +1,8 @@
 // components/shop/FeaturedProducts.tsx
 const dummyProducts = [
-  { id: 1, name: "Floral Wrap Dress", price: "₹1,999", img: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1" },
+  { id: 1, name: "Tennis set", price: "₹1,999", img: "https://i.pinimg.com/control1/1200x/9c/fb/c2/9cfbc2153bbe634176f015cc9e1cfbe8.jpg" },
   { id: 2, name: "Soft Ribbed Top", price: "₹899", img: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" },
-  { id: 3, name: "Pastel Cardigan", price: "₹2,499", img: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e" },
+  { id: 3, name: "Casual Wear", price: "₹2,499", img: "https://i.pinimg.com/736x/3f/02/4e/3f024ef672241a7f22ac535562b0c672.jpg" },
   { id: 4, name: "Wide Leg Jeans", price: "₹2,299", img: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246" },
 ];
 
