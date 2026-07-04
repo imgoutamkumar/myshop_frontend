@@ -3,24 +3,33 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 type ApiResponse<T = any> = {
-  data: T
-  status: string
-  message: string
+    data: T
+    status: string
+    message: string
 }
 
 type AuthResponse = ApiResponse<null> & {
-  token: string
+    token: string
 }
 
 type LoginResponse = {
-  status: string
-  token: string
-  message: string
-  data: {
-    role: string
-    id: string
-    email: string
-  } | null
+    status: string
+    token: string
+    message: string
+    data: {
+        role: string
+        id: string
+        email: string
+    } | null
+}
+
+type UserProfileData = {
+    id: string;
+    email: string;
+    fullname: string;
+    username: string;
+    role: string;
+    // add any other fields like phone, avatar URL, etc.
 }
 
 export const authApi = createApi({
@@ -69,17 +78,23 @@ export const authApi = createApi({
             }),
             invalidatesTags: ['User'],
         }),
-        getUser: builder.query<ApiResponse, string>({
-            query: (id) => `/users/${id}`, 
+        getUser: builder.query<ApiResponse, { username: string; fullname: string, email: string; password: string }>({
+            query: (id) => `/users/${id}`,
+            providesTags: ['User'],
+        }),
+        getUserProfile: builder.query<ApiResponse<UserProfileData>, void>({
+            // Since we don't pass arguments, the query is just the endpoint string
+            query: () => `/users/userprofile`,
             providesTags: ['User'],
         }),
     }),
 })
 
 export const {
-  useRegisterMutation,
-  useLoginMutation,
-  useLogoutMutation,
-  useGetUserQuery,
-  useLazyGetUserQuery,
+    useRegisterMutation,
+    useLoginMutation,
+    useLogoutMutation,
+    useGetUserQuery,
+    useLazyGetUserQuery,
+    useGetUserProfileQuery,
 } = authApi

@@ -47,8 +47,12 @@ const AllProducts = () => {
   if (!isLoading) {
     console.log(data)
   }
-  // const products = data?.data ?? []
-  const products = allProducts
+  const products = data?.data ?? []
+  
+  //mock data start
+  // const products = allProducts
+  //mock data end
+ 
 
   return (
     <div className="flex">

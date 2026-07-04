@@ -1,119 +1,187 @@
-import { useState } from "react"
+"use client";
+
+import { useState } from "react";
+import { Trash2, MapPin, CreditCard, ChevronRight, Minus, Plus } from "lucide-react";
+import { Link } from "react-router-dom"; // Assuming you are using React Router
 
 const Checkout = () => {
-    const [showAddress, setShowAddress] = useState(false)
+    const [showAddress, setShowAddress] = useState(false);
 
+    // Updated dummy data to match the aesthetic brand
     const products = [
-        { name: "Running Shoes", description: ["Lightweight and comfortable", "Breathable mesh upper", "Ideal for jogging and casual wear"], offerPrice: 250, price: 200, quantity: 1, size: 42, image: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage.png", category: "Footwear", },
-        { name: "Running Shoes", description: ["Lightweight and comfortable", "Breathable mesh upper", "Ideal for jogging and casual wear"], offerPrice: 250, price: 200, quantity: 1, size: 42, image: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage2.png", category: "Footwear", },
-        { name: "Running Shoes", description: ["Lightweight and comfortable", "Breathable mesh upper", "Ideal for jogging and casual wear"], offerPrice: 250, price: 200, quantity: 1, size: 42, image: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage3.png", category: "Footwear", },
-    ]
-    return (
-        <div className="flex flex-col md:flex-row py-16 max-w-6xl w-full px-6 mx-auto">
-            <div className='flex-1 max-w-4xl'>
-                <h1 className="text-3xl font-medium mb-6">
-                    Shopping Cart <span className="text-sm text-indigo-500">3 Items</span>
-                </h1>
+        { 
+            name: "Floral Wrap Dress", 
+            color: "Soft Pink", 
+            price: 1999, 
+            quantity: 1, 
+            size: "S", 
+            image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446" 
+        },
+        { 
+            name: "Ribbed Knit Sweater", 
+            color: "Cream", 
+            price: 2499, 
+            quantity: 1, 
+            size: "M", 
+            image: "https://images.unsplash.com/photo-1434389678224-118df283d65b" 
+        },
+    ];
 
-                <div className="grid grid-cols-[2fr_1fr_1fr] text-gray-500 text-base font-medium pb-3">
-                    <p className="text-left">Product Details</p>
-                    <p className="text-center">Subtotal</p>
-                    <p className="text-center">Action</p>
+    // Calculate totals
+    const subtotal = products.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    const shipping = subtotal > 3000 ? 0 : 150; // Free shipping over 3000
+    const tax = Math.round(subtotal * 0.05); // 5% tax
+    const total = subtotal + shipping + tax;
+
+    return (
+        <div className="min-h-screen bg-stone-50 font-sans font-light text-stone-800 py-4 md:py-4">
+            <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+                
+                {/* Header */}
+                <div className="mb-6">
+                    <h1 className="text-4xl md:text-5xl font-serif text-rose-900 mb-2">Shopping Bag</h1>
+                    <p className="text-stone-500">{products.length} items in your bag</p>
                 </div>
 
-                {products.map((product, index) => (
-                    <div key={index} className="grid grid-cols-[2fr_1fr_1fr] text-gray-500 items-center text-sm md:text-base font-medium pt-3">
-                        <div className="flex items-center md:gap-6 gap-3">
-                            <div className="cursor-pointer w-24 h-24 flex items-center justify-center border border-gray-300 rounded overflow-hidden">
-                                <img className="max-w-full h-full object-cover" src={product.image} alt={product.name} />
-                            </div>
-                            <div>
-                                <p className="hidden md:block font-semibold">{product.name}</p>
-                                <div className="font-normal text-gray-500/70">
-                                    <p>Size: <span>{product.size || "N/A"}</span></p>
-                                    <div className='flex items-center'>
-                                        <p>Qty:</p>
-                                        <select className='outline-none'>
-                                            {Array(5).fill('').map((_, index) => (
-                                                <option key={index} value={index + 1}>{index + 1}</option>
-                                            ))}
-                                        </select>
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+                    
+                    {/* LEFT COLUMN: Cart Items */}
+                    <div className="flex-1 flex flex-col gap-8">
+                        <div className="flex flex-col gap-6">
+                            {products.map((product, index) => (
+                                <div key={index} className="flex gap-4 md:gap-6 pb-6 border-b border-stone-200 group">
+                                    {/* Product Image */}
+                                    <div className="w-28 h-36 md:w-32 md:h-44 rounded-2xl overflow-hidden bg-stone-100 shrink-0">
+                                        <img 
+                                            className="w-full h-full object-cover" 
+                                            src={product.image} 
+                                            alt={product.name} 
+                                        />
+                                    </div>
+
+                                    {/* Product Details */}
+                                    <div className="flex flex-col flex-1 py-1">
+                                        <div className="flex justify-between items-start">
+                                            <div>
+                                                <h3 className="text-base md:text-lg font-medium text-stone-800">{product.name}</h3>
+                                                <p className="text-sm text-stone-500 mt-1">Color: {product.color} | Size: {product.size}</p>
+                                            </div>
+                                            <button className="text-stone-400 hover:text-rose-600 transition-colors p-2 -mr-2">
+                                                <Trash2 className="w-4 h-4 md:w-5 md:h-5" />
+                                            </button>
+                                        </div>
+
+                                        <div className="mt-auto flex items-end justify-between">
+                                            {/* Premium Quantity Selector */}
+                                            <div className="flex items-center gap-4 border border-stone-200 rounded-full px-3 py-1.5 bg-white">
+                                                <button className="text-stone-400 hover:text-rose-900 transition-colors">
+                                                    <Minus className="w-3 h-3" />
+                                                </button>
+                                                <span className="text-sm font-medium w-4 text-center">{product.quantity}</span>
+                                                <button className="text-stone-400 hover:text-rose-900 transition-colors">
+                                                    <Plus className="w-3 h-3" />
+                                                </button>
+                                            </div>
+                                            <p className="text-base md:text-lg font-medium text-stone-800">
+                                                ₹{(product.price * product.quantity).toLocaleString()}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
-                        <p className="text-center">${product.offerPrice * product.quantity}</p>
-                        <button className="cursor-pointer mx-auto">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="m12.5 7.5-5 5m0-5 5 5m5.833-2.5a8.333 8.333 0 1 1-16.667 0 8.333 8.333 0 0 1 16.667 0" stroke="#FF532E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+
+                        {/* Continue Shopping Link */}
+                        <Link to="/shop/home" className="inline-flex items-center gap-2 text-stone-500 hover:text-rose-900 transition-colors w-fit group text-sm font-medium">
+                            <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:-translate-x-1 transition-transform">
+                                <path d="M14.09 5.5H1M6.143 10 1 5.5 6.143 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-                        </button>
-                    </div>)
-                )}
-
-                <button className="group cursor-pointer flex items-center mt-8 gap-2 text-indigo-500 font-medium">
-                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.09 5.5H1M6.143 10 1 5.5 6.143 1" stroke="#615fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    Continue Shopping
-                </button>
-
-            </div>
-
-            <div className="max-w-[360px] w-full bg-gray-100/40 p-5 max-md:mt-16 border border-gray-300/70">
-                <h2 className="text-xl md:text-xl font-medium">Order Summary</h2>
-                <hr className="border-gray-300 my-5" />
-
-                <div className="mb-6">
-                    <p className="text-sm font-medium uppercase">Delivery Address</p>
-                    <div className="relative flex justify-between items-start mt-2">
-                        <p className="text-gray-500">No address found</p>
-                        <button onClick={() => setShowAddress(!showAddress)} className="text-indigo-500 hover:underline cursor-pointer">
-                            Change
-                        </button>
-                        {showAddress && (
-                            <div className="absolute top-12 py-1 bg-white border border-gray-300 text-sm w-full">
-                                <p onClick={() => setShowAddress(false)} className="text-gray-500 p-2 hover:bg-gray-100">
-                                    New York, USA
-                                </p>
-                                <p onClick={() => setShowAddress(false)} className="text-indigo-500 text-center cursor-pointer p-2 hover:bg-indigo-500/10">
-                                    Add address
-                                </p>
-                            </div>
-                        )}
+                            Continue Shopping
+                        </Link>
                     </div>
 
-                    <p className="text-sm font-medium uppercase mt-6">Payment Method</p>
+                    {/* RIGHT COLUMN: Order Summary (Sticky) */}
+                    <div className="w-full lg:w-[400px] xl:w-[420px] shrink-0">
+                        {/* Sticky container */}
+                        <div className="sticky top-28 bg-white p-6 md:p-8 rounded-3xl border border-stone-100 shadow-sm flex flex-col gap-8">
+                            <h2 className="text-2xl font-serif text-rose-900">Order Summary</h2>
+                            
+                            {/* Address & Payment UI */}
+                            <div className="flex flex-col gap-4">
+                                {/* Address Box */}
+                                <div className="p-4 rounded-2xl border border-stone-200 bg-stone-50/50 flex flex-col gap-2 relative">
+                                    <div className="flex justify-between items-center">
+                                        <div className="flex items-center gap-2 text-stone-800 font-medium text-sm">
+                                            <MapPin className="w-4 h-4 text-rose-500" />
+                                            Delivery Address
+                                        </div>
+                                        <button 
+                                            onClick={() => setShowAddress(!showAddress)} 
+                                            className="text-xs text-rose-600 font-medium hover:underline"
+                                        >
+                                            Change
+                                        </button>
+                                    </div>
+                                    <p className="text-sm text-stone-500 pl-6">123 Fashion Ave, NY 10001</p>
+                                </div>
 
-                    <select className="w-full border border-gray-300 bg-white px-3 py-2 mt-2 outline-none">
-                        <option value="COD">Cash On Delivery</option>
-                        <option value="Online">Online Payment</option>
-                    </select>
+                                {/* Payment Method Box */}
+                                <div className="p-4 rounded-2xl border border-stone-200 bg-stone-50/50 flex flex-col gap-2 relative">
+                                    <div className="flex items-center gap-2 text-stone-800 font-medium text-sm">
+                                        <CreditCard className="w-4 h-4 text-rose-500" />
+                                        Payment Method
+                                    </div>
+                                    <select className="ml-6 mt-1 text-sm bg-transparent border-none text-stone-600 outline-none cursor-pointer p-0 focus:ring-0">
+                                        <option value="Card">Credit/Debit Card</option>
+                                        <option value="UPI">UPI / Netbanking</option>
+                                        <option value="COD">Cash on Delivery</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            {/* Cost Breakdown */}
+                            <div className="flex flex-col gap-3 text-sm text-stone-500">
+                                <div className="flex justify-between">
+                                    <span>Subtotal</span>
+                                    <span className="text-stone-800">₹{subtotal.toLocaleString()}</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span>Shipping</span>
+                                    {shipping === 0 ? (
+                                        <span className="text-emerald-600 font-medium">Free</span>
+                                    ) : (
+                                        <span className="text-stone-800">₹{shipping.toLocaleString()}</span>
+                                    )}
+                                </div>
+                                <div className="flex justify-between">
+                                    <span>Estimated Tax</span>
+                                    <span className="text-stone-800">₹{tax.toLocaleString()}</span>
+                                </div>
+                                
+                                <div className="h-[1px] w-full bg-stone-200 my-2"></div>
+                                
+                                <div className="flex justify-between items-center text-lg font-medium text-stone-800">
+                                    <span>Total</span>
+                                    <span>₹{total.toLocaleString()}</span>
+                                </div>
+                            </div>
+
+                            {/* Checkout Button */}
+                            <button className="w-full py-4 rounded-full bg-rose-900 text-white font-medium tracking-wide hover:bg-rose-800 transition-all shadow-sm hover:shadow-md flex justify-center items-center gap-2">
+                                Proceed to Checkout
+                                <ChevronRight className="w-4 h-4" />
+                            </button>
+                            
+                            <p className="text-xs text-center text-stone-400 -mt-3">
+                                Secure encrypted checkout
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-
-                <hr className="border-gray-300" />
-
-                <div className="text-gray-500 mt-4 space-y-2">
-                    <p className="flex justify-between">
-                        <span>Price</span><span>$20</span>
-                    </p>
-                    <p className="flex justify-between">
-                        <span>Shipping Fee</span><span className="text-green-600">Free</span>
-                    </p>
-                    <p className="flex justify-between">
-                        <span>Tax (2%)</span><span>$20</span>
-                    </p>
-                    <p className="flex justify-between text-lg font-medium mt-3">
-                        <span>Total Amount:</span><span>$20</span>
-                    </p>
-                </div>
-
-                <button className="w-full py-3 mt-6 cursor-pointer bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition">
-                    Place Order
-                </button>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Checkout
+export default Checkout;

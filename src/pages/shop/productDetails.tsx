@@ -7,20 +7,22 @@ import RenderAttributes from '@/components/shop/RenderAttributes';
 import allProducts from '@/mockdata/allProducts.json';
 const ProductDetails = () => {
 
- 
+
   const navigate = useNavigate()
   const [queryParams] = useSearchParams()
   const { productId } = useParams<{ productId: string }>()
   const variantId = queryParams.get("v")
   const { data, isLoading, isFetching } = useGetProductByIdQuery(productId ?? skipToken)
   console.log("data", data)
-  // const product = data?.data
+  const product = data?.data
 
-   // mock data start
-   const mockProduct = allProducts.find(
-    (item) => item.id === productId
-  );
-  const product = mockProduct
+  // mock data start
+  
+  // const mockProduct = allProducts.find(
+  //   (item) => item.id === productId
+  // );
+  // const product = mockProduct
+
   // mock data end
 
 
@@ -33,10 +35,10 @@ const ProductDetails = () => {
     return product?.variants?.find(v => v?.id === variantId)
   }, [product, variantId])
 
-const variantImages = selectedVariant?.images ?? []
-const defaultImg = variantImages.at(0)?.url
-const [activeImg, setActiveImg] = useState<string | null>(null)
-const displayedImg = activeImg ?? defaultImg ?? ""
+  const variantImages = selectedVariant?.images ?? []
+  const defaultImg = variantImages.at(0)?.url
+  const [activeImg, setActiveImg] = useState<string | null>(null)
+  const displayedImg = activeImg ?? defaultImg ?? ""
 
 
 
@@ -46,9 +48,9 @@ const displayedImg = activeImg ?? defaultImg ?? ""
       <div className='grid grid-cols-1 lg:grid-cols-2 p-1'>
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-3">
 
-  {/* THUMBNAILS - LEFT on PC, BOTTOM on mobile */}
-  <div
-    className="
+          {/* THUMBNAILS - LEFT on PC, BOTTOM on mobile */}
+          <div
+            className="
       flex gap-3 p-2
       order-2 sm:order-1
       overflow-x-auto sm:overflow-y-auto
@@ -57,42 +59,41 @@ const displayedImg = activeImg ?? defaultImg ?? ""
         w-full sm:w-[140px] md:w-[170px] lg:w-[120px]
       premium-scrollbar
     "
-  >
-    {variantImages.map((img: any) => (
-      <div
-        key={img?.id}
-        onClick={() => setActiveImg(img?.url)}
-        className={`w-[80px] sm:w-[90px] md:w-full
+          >
+            {variantImages.map((img: any) => (
+              <div
+                key={img?.id}
+                onClick={() => setActiveImg(img?.url)}
+                className={`w-[80px] sm:w-[90px] md:w-full
 h-[80px] sm:h-[90px]
 cursor-pointer rounded-xl overflow-hidden
 transition-all duration-300 ease-out
 hover:scale-[1.03] hover:shadow-lg
-${
-  activeImg === img?.url
-    ? "ring-2 ring-pink-400 ring-offset-2 scale-105 shadow-md"
-    : "border border-gray-200 hover:border-pink-300"
-}`}
-      >
-        <img
-          src={img?.url}
-          className="w-full h-full object-cover"
-        />
-      </div>
-    ))}
-  </div>
+${activeImg === img?.url
+                    ? "ring-2 ring-pink-400 ring-offset-2 scale-105 shadow-md"
+                    : "border border-gray-200 hover:border-pink-300"
+                  }`}
+              >
+                <img
+                  src={img?.url}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
 
-  {/* MAIN IMAGE - RIGHT on PC */}
-  <div className="bg-gradient-to-br lg:w-[500px] from-pink-50 to-purple-50 rounded-2xl overflow-hidden sm:h-[600px] shadow-sm w-full sm:w-[75%] order-1 sm:order-2">
-    {displayedImg && (
-      <img
-        src={displayedImg}
-        alt="product"
-        className="w-full  h-full object-cover transition-transform duration-500 hover:scale-105"
-      />
-    )}
-  </div>
+          {/* MAIN IMAGE - RIGHT on PC */}
+          <div className="bg-gradient-to-br lg:w-[500px] from-pink-50 to-purple-50 rounded-2xl overflow-hidden sm:h-[600px] shadow-sm w-full sm:w-[75%] order-1 sm:order-2">
+            {displayedImg && (
+              <img
+                src={displayedImg}
+                alt="product"
+                className="w-full  h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            )}
+          </div>
 
-</div>
+        </div>
         <div className="px-3">
           <h1 className="text-3xl font-semibold tracking-tight text-gray-800">{product?.name}</h1>
 
@@ -112,7 +113,7 @@ ${
           </div>
 
           <div className="mt-6 bg-white/60 backdrop-blur-sm p-3 rounded-xl border border-gray-100">
-            <p  className="text-gray-400 line-through text-sm">MRP: ${product?.price}</p>
+            <p className="text-gray-400 line-through text-sm">MRP: ${product?.price}</p>
             <p className="text-2xl font-semibold text-pink-600">MRP: ${product?.offerPrice}</p>
             <span className="text-gray-500/70">(inclusive of all taxes)</span>
           </div>
@@ -146,16 +147,16 @@ transition-all duration-300 cursor-pointer" >
         <div className="flex flex-wrap gap-3 w-full">
           {product?.variants.map((variant: any, index: number) => (
             <div
-  key={index}
-  onClick={() => {
-    navigate(`/shop/product/${productId}?v=${variant?.id}`, { replace: true })
-    setActiveImg(variant.images?.[0]?.url)
-  }}
-  className="cursor-pointer px-3 py-2 rounded-full
+              key={index}
+              onClick={() => {
+                navigate(`/shop/product/${productId}?v=${variant?.id}`, { replace: true })
+                setActiveImg(variant.images?.[0]?.url)
+              }}
+              className="cursor-pointer px-3 py-2 rounded-full
   bg-gray-100 hover:bg-pink-50
   text-sm transition-all duration-300
   hover:scale-[1.03]"
->
+            >
               <span>{variant?.sku}</span>
             </div>
           ))}

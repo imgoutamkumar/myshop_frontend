@@ -2,7 +2,7 @@
 import './App.css'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import ShopLayout from './components/shop/layout'
-import Cart from './pages/shop/cart'
+import Cart from './pages/shop/Cart'
 import Login from './pages/auth/login'
 import AuthLayout from './components/auth/layout'
 import Home from './pages/shop/home'
@@ -16,6 +16,8 @@ import ProductDetails from './pages/shop/productDetails'
 import RoleGuard from './guards/RoleGuard'
 import AdminDashboard from './pages/admin/AdminDashboard'
 import Checkout from './pages/shop/Checkout'
+import UserProfile from './pages/shop/UserProfile'
+import Wishlist from './pages/shop/Wishlist'
 
 function App() {
 
@@ -29,9 +31,9 @@ function App() {
       <Route path="/" element={<Navigate to="/auth/login" />} />
 
       // test link stay_primary_portrait
-      <Route path='/products' element={<AllProducts />} />
-      <Route path="/shop/product/:productId" element={<ProductDetails />} />
-       <Route path="/shop/home" element={<Home />} />
+      {/* <Route path='/products' element={<AllProducts />} /> */}
+      {/* <Route path="/shop/product/:productId" element={<ProductDetails />} /> */}
+       {/* <Route path="/shop/home" element={<Home />} /> */}
       // test link end
 
       <Route path='/auth' element={<AuthLayout />} >
@@ -42,9 +44,11 @@ function App() {
       <Route element={<RoleGuard allowedRoles={["user"]} />}>
         <Route path='/shop' element={<ShopLayout />} >
           <Route path='profile/:id' element={<Profile />} />
+           <Route path='profile' element={<UserProfile />} />
           <Route path="home" element={<Home />} />
+          <Route path="wishlist" element={<Wishlist />} />
           <Route path='cart' element={<Cart />} />
-          {/* <Route path='products' element={<AllProducts />} /> */}
+          <Route path='products' element={<AllProducts />} />
           <Route path="product/:productId" element={<ProductDetails />} />
           <Route path="checkout" element={<Checkout />} />
         </Route>
