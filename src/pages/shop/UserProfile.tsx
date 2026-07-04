@@ -31,7 +31,7 @@ const UserProfile = () => {
     if (isLoading) {
         return (
             <div className="min-h-[60vh] bg-stone-50 flex items-center justify-center">
-                <p className="text-stone-500 font-serif text-lg animate-pulse">Loading your sanctuary...</p>
+                <p className="text-stone-500 font-serif text-lg animate-pulse">Loading your Profile Info...</p>
             </div>
         );
     }

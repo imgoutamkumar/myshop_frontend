@@ -25,7 +25,10 @@ const Navbar = () => {
                     {/* Brand Logo */}
                     <Link to="/shop/home" className="flex items-center gap-2">
                         {/* Replace with your actual logo image if you have one */}
-                        <span className="text-3xl font-serif font-semibold text-rose-900 tracking-tight">
+                        <span
+                            className="text-3xl font-semibold tracking-tight text-rose-900 drop-shadow-xs"
+                            style={{ fontFamily: "'Dancing Script', 'Brush Script MT', 'Caveat', cursive" }}
+                        >
                             PikaPika.
                         </span>
                     </Link>
