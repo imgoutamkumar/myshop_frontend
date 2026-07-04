@@ -2,7 +2,6 @@
 import './App.css'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import ShopLayout from './components/shop/layout'
-import Cart from './pages/shop/Cart'
 import Login from './pages/auth/login'
 import AuthLayout from './components/auth/layout'
 import Home from './pages/shop/home'
@@ -18,6 +17,7 @@ import AdminDashboard from './pages/admin/AdminDashboard'
 import Checkout from './pages/shop/Checkout'
 import UserProfile from './pages/shop/UserProfile'
 import Wishlist from './pages/shop/Wishlist'
+import Cart from './pages/shop/cart'
 
 function App() {
 

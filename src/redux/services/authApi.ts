@@ -83,7 +83,7 @@ export const authApi = createApi({
             }),
             invalidatesTags: ['User'],
         }),
-        getUser: builder.query<ApiResponse, { username: string; fullname: string, email: string; password: string }>({
+        getUser: builder.query<ApiResponse, string>({
             query: (id) => `/users/${id}`,
             providesTags: ['User'],
         }),
