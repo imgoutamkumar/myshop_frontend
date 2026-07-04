@@ -26,10 +26,15 @@ type LoginResponse = {
 type UserProfileData = {
     id: string;
     email: string;
-    fullname: string;
+    full_name: string;
     username: string;
     role: string;
+    phone: string;
+    avatar: string;
+    created_at: string;
+  
     // add any other fields like phone, avatar URL, etc.
+   // add any other fields like phone, avatar URL, etc.
 }
 
 export const authApi = createApi({
